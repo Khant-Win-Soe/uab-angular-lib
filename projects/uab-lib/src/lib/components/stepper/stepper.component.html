@@ -1,0 +1,28 @@
+<div class="stepper-header">
+  <div
+    class="step-header"
+    *ngFor="let step of steps; let i = index"
+    [class.active]="currentStepIndex === i || i < currentStepIndex"
+  >
+    <div class="d-flex w-100 align-items-center">
+      <div class="line" [ngClass]="i > 0 ? 'show-line' : 'hide-line'"></div>
+
+      <div class="icon">
+        <ng-container>
+          @if (step.icon){ <i [ngClass]="step.icon"></i>} @else { {{ i + 1 }} }
+        </ng-container>
+      </div>
+
+      <div
+        class="line"
+        [ngClass]="i < steps.length - 1 ? 'show-line' : 'hide-line'"
+      ></div>
+    </div>
+
+    <div class="label">{{ step.label }}</div>
+  </div>
+</div>
+
+<div class="stepper-body">
+  <ng-content></ng-content>
+</div>

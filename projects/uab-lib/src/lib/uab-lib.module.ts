@@ -10,6 +10,8 @@ import { FileUploadPreviewComponent } from './components/file-upload-preview/fil
 import { InputBoxComponent } from './components/input-box/input-box.component';
 import { NrcBoxComponent } from './components/nrc-box/nrc-box.component';
 import { RadioBoxComponent } from './components/radio-box/radio-box.component';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { StepComponent } from './components/stepper/step.component';
 import { VideoRecoderComponent } from './components/video-recoder/video-recoder.component';
 
 @NgModule({
@@ -23,6 +25,8 @@ import { VideoRecoderComponent } from './components/video-recoder/video-recoder.
     InputBoxComponent,
     NrcBoxComponent,
     RadioBoxComponent,
+    StepComponent,
+    StepperComponent,
     VideoRecoderComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
@@ -36,6 +40,8 @@ import { VideoRecoderComponent } from './components/video-recoder/video-recoder.
     InputBoxComponent,
     NrcBoxComponent,
     RadioBoxComponent,
+    StepComponent,
+    StepperComponent,
     VideoRecoderComponent,
   ],
   bootstrap: [NrcBoxComponent],
