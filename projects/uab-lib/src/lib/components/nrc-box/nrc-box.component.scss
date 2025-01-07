@@ -1,0 +1,17 @@
+.nrc_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.nrc_number_box {
+  flex: 1 0 250px;
+}
+.select_box {
+  flex: 1 0 80px;
+  margin-bottom: 8px;
+}
+.required {
+  color: var(--error-message-color);
+}

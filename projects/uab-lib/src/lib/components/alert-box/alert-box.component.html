@@ -1,0 +1,24 @@
+<div class="alert_parent" [ngClass]="alertOn ? 'show' : ''">
+  <div class="alert_container" [ngStyle]="currentStyles" [ngClass]="alertStyle">
+    <i
+      class="alert_icon"
+      [ngClass]="[alertIconClass, alertColor]"
+      [ngStyle]="{ display: alertIconClass ? '' : 'none' }"
+    ></i>
+    <!-- <div class="alert_content"> -->
+    <div class="alert_title">
+      {{ alertTitle }}
+    </div>
+    <div class="alert_text">
+      {{ alertText }}
+    </div>
+    <!-- </div> -->
+    <div class="alert_button">
+      <lib-button
+        [buttonText]="alertButtonText"
+        (buttonClick)="closeAlert()"
+        [buttonWidth]="'100px'"
+      />
+    </div>
+  </div>
+</div>

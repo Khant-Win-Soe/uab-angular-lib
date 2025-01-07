@@ -1,0 +1,23 @@
+<label for="dropdown-label" *ngIf="label">{{ label }}</label>
+<div class="dropdown_cus">
+  <button
+    class="dropdown_toggle"
+    type="button"
+    (click)="showDropdownLists()"
+    [disabled]="isDisabled"
+  >
+    {{ selectedItem || placeholder }}
+    <span
+      class="icon"
+      [ngClass]="showDropdownList ? 'openIcon' : 'closeIcon'"
+    ></span>
+  </button>
+  <ul class="dropdown_menu" *ngIf="showDropdownList">
+    <li
+      *ngFor="let item of dataSource"
+      (click)="onSelect(valueExp ? item[valueExp] : item)"
+    >
+      {{ displayValue ? item[displayValue] : item }}
+    </li>
+  </ul>
+</div>

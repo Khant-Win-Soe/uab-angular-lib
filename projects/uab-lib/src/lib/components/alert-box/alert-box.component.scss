@@ -1,0 +1,81 @@
+.alert_parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s ease 0.5s;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s ease 0s;
+}
+
+.alert_container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--lib-card-box-shadow);
+  text-align: center;
+  align-items: center;
+}
+.alert_icon_left {
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+
+  .alert_icon {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  .alert_text {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .alert_button {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    justify-content: flex-end;
+  }
+}
+
+.success {
+  color: var(--lib-success-color);
+}
+.info {
+  color: var(--lib-info-color);
+}
+.warning {
+  color: var(--lib-warning-color);
+}
+.danger {
+  color: var(--lib-danger-color);
+}
+
+.alert_icon {
+  font-size: 45px;
+}
+
+.alert_title {
+  font-size: var(--lib-header-font-size);
+  font-weight: bold;
+  margin: 8px 0;
+}
+.alert_text {
+  font-size: var(--lib-label-font-size);
+  text-align: justify;
+  margin-bottom: 16px;
+}
+.alert_button {
+  display: flex;
+  justify-content: center;
+}

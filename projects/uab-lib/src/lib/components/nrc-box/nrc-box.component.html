@@ -1,0 +1,84 @@
+<div class="row mb-3">
+  <div class="d-flex justify-content-center mb-3" *ngIf="showRadio">
+    <ng-container *ngFor="let item of nrcRadio">
+      <div class="form-check d-flex ps-0 pe-3">
+        <!-- <div class="col-sm mb-3 d-flex align-content-center"> -->
+        <input
+          class="from-check-input"
+          type="radio"
+          name="isNrc"
+          [(ngModel)]="isNrc"
+          [value]="item.value"
+        />
+        <label class="from-check-label ms-2"></label>{{ item.dispaly }}
+      </div>
+    </ng-container>
+  </div>
+
+  <label class="mb-3"
+    >{{ label }} <span class="required" *ngIf="isRequired">*</span></label
+  >
+  <div class="nrc_box">
+    <ng-container *ngIf="isNrc">
+      <!-- <select [(ngModel)]="stateCode" class="form-select select_box">
+        <option *ngFor="let option of stateList" [value]="option">
+          {{ option }}
+        </option>
+      </select> -->
+
+      <select [(ngModel)]="townshipCode" class="form-select select_box">
+        <option *ngFor="let option of townshipList" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+
+      <select [(ngModel)]="citizenShip" class="form-select select_box">
+        <option *ngFor="let option of citizenList" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </ng-container>
+
+    <div class="nrc_number_box">
+      <!-- <app-input-box
+          [type]="isNrc ? 'number' : 'text'"
+          [placeHolder]="isNrc ? '000000' : 'AMAPA/5334534'"
+          [maxlength]="isNrc ? 6 : 25"
+          [(value)]="nrcNumber"
+          [showIcon]="true"
+          [isRequired]="true"
+        /> -->
+    </div>
+  </div>
+</div>
+
+<div class="nrc_box">
+  <lib-dropdown-box
+    [value]="stateCode"
+    placeholder="၁၂"
+    displayValue="code_mm"
+    valueExp="code_mm"
+    [dataSource]="stateList"
+    (selectionChange)="stateCodeChange($event)"
+  />
+  {{ "/" }}
+  <lib-dropdown-box
+    [value]="townshipCode"
+    placeholder="ကမန"
+    displayValue="code_mm"
+    valueExp="code_mm"
+    [dataSource]="townshipList"
+    [isDisabled]="!townshipList"
+  />
+  {{ "(" }}
+  <lib-dropdown-box
+    [value]="stateCode"
+    placeholder="နိုင်"
+    displayValue="code_mm"
+    valueExp="code_mm"
+    [dataSource]="citizenList"
+  />
+  {{ ")" }}
+
+  <div class="nrc_number_box"><lib-input-box /></div>
+</div>

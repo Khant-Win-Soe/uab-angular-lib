@@ -1,0 +1,29 @@
+<div class="recorder-container">
+  <!-- <div
+    *ngIf="isRecording"
+    class="progress-ring"
+    [style.background]="progressRingBackground"
+  >
+    <div
+      class="progress-ring-bar"
+      [style.strokeDashoffset]="progressBarOffset"
+    ></div>
+  </div> -->
+  <div class="video_box">
+    <video [src]="videoUrl" controls muted></video>
+    <div
+      *ngIf="isRecording"
+      class="progress_ring"
+      [style.strokeDashoffset]="progressBarOffset"
+    ></div>
+  </div>
+  <lib-button
+    [buttonWidth]="'100px'"
+    [buttonRadius]="buttonRadius.circle"
+    [buttonColor]="buttonColor.primary"
+    [buttonText]="'Hold'"
+    (mouseDown)="startRecording()"
+    (mouseUp)="stopRecording()"
+    (mouseLeave)="stopRecording()"
+  />
+</div>

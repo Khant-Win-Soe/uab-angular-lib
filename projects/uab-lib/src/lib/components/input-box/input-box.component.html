@@ -1,0 +1,45 @@
+<div [ngClass]="inputBoxParentDiv">
+  <label [ngClass]="inputBoxLabelStyle" [hidden]="!label">{{ label }}</label>
+
+  <div class="input_div">
+    <input
+      [ngClass]="inputBoxInputStyle"
+      [ngStyle]="{
+        border: showValidate ? 'var(--lib-input-border-error)' : ''
+      }"
+      [type]="type"
+      [formControl]="control"
+      [attr.placeholder]="placeHolder"
+      [readOnly]="isReadOnly"
+      [required]="true"
+      (wheel)="onWheel($event)"
+      (copy)="onCopyPaste($event)"
+      (cut)="onCopyPaste($event)"
+      (paste)="onCopyPaste($event)"
+    />
+    <div [hidden]="!inputBoxIconStyle" ngClass="inputBoxIconStyle"></div>
+  </div>
+
+  <div
+    [ngSwitch]="true"
+    [ngClass]="inputBoxErrorMessageStyle"
+    *ngIf="showValidate"
+  >
+    <span *ngSwitchCase="control.hasError('required')">
+      {{ validateRequiredMessage }}
+    </span>
+    <span *ngSwitchCase="control.hasError('minlength')">
+      {{ validateMinLengthMessage }}
+    </span>
+    <span *ngSwitchCase="control.hasError('maxlength')">
+      {{ validateMaxLengthMessage }}
+    </span>
+    <span *ngSwitchCase="control.hasError('pattern')">
+      {{ validatePatternMessage }}
+    </span>
+    <span *ngSwitchCase="control.hasError('email')">
+      {{ validateEmailMessage }}
+    </span>
+    <span *ngSwitchDefault>{{ validateCustomMessage }}</span>
+  </div>
+</div>

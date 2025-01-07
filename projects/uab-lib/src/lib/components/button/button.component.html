@@ -1,0 +1,15 @@
+<button
+  (click)="click()"
+  (mousedown)="mDown()"
+  (mouseup)="mUp()"
+  (mouseleave)="mLeave()"
+  [ngClass]="[buttonColor, buttonRadius, customClass]"
+  [ngStyle]="currentStyles"
+>
+  {{ buttonText }}
+  <i
+    class="icon"
+    [ngClass]="buttonIconClass"
+    [ngStyle]="{ display: buttonIconClass ? '' : 'none' }"
+  ></i>
+</button>

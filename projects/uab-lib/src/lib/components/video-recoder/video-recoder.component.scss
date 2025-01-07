@@ -1,0 +1,62 @@
+.recorder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.record-button {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--lib-success-color);
+  padding: var(--lib-input-padding);
+  color: var(--lib-white-color);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress_ring {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  //   color: var(--lib-primary-color);
+  border: 10px solid var(--lib-primary-color);
+  transform: rotate(-90deg);
+}
+.progress-ring {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bar {
+  stroke-dasharray: 1256; /* Circumference of the circle */
+  stroke-dashoffset: 0;
+  stroke: var(--lib-primary-color);
+  stroke-width: 10;
+  fill: transparent;
+}
+.video_box {
+  width: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+video {
+  width: 200%;
+  height: 200%;
+}

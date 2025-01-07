@@ -1,0 +1,67 @@
+/* General button styles */
+button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  color: var(--lib-white-color);
+  background-color: var(--lib-primary-color);
+  font-size: var(--lib-text-font-size);
+  transition: background-color 0.3s ease;
+}
+.icon {
+  margin: 4px 8px;
+}
+button:hover {
+  filter: brightness(90%);
+}
+
+/* Button styles */
+.primary {
+  background-color: var(--lib-primary-color);
+}
+.secondary {
+  background-color: var(--lib-white-color);
+  color: var(--lib-primary-color) !important;
+  border: 1px solid var(--lib-primary-color) !important;
+}
+.success {
+  background-color: var(--lib-success-color);
+}
+.warning {
+  background-color: var(--lib-warning-color);
+}
+.danger {
+  background-color: var(--lib-danger-color);
+}
+.noBackground {
+  background-color: transparent;
+  color: var(--lib-primary-color);
+}
+.link {
+  background-color: transparent;
+  color: var(--lib-primary-color);
+  text-decoration: underline;
+}
+
+/* Border radius styles */
+.small {
+  border-radius: var(--lib-border-radius-sm);
+}
+.normal {
+  border-radius: var(--lib-border-radius);
+}
+.large {
+  border-radius: var(--lib-border-radius-lg);
+}
+.rounded {
+  border-radius: var(--lib-border-radius-rounded) !important;
+}
+
+.circle {
+  border-radius: var(--lib-border-radius-circle);
+  aspect-ratio: 1;
+}

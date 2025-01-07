@@ -1,0 +1,28 @@
+:root {
+  //library variable
+  --lib-label-color: #395a59;
+  --lib-white-color: #ffffff;
+  --lib-primary-color: #4204ff;
+  --lib-success-color: #00ff11;
+  --lib-warning-color: #fcd200;
+  --lib-info-color: #04eeff;
+  --lib-danger-color: #ff0000;
+  --lib-hover-color: #eeeeee;
+
+  --lib-border-radius-sm: 0.25rem; /* 4px */
+  --lib-border-radius: 0.5rem; /* 8px */
+  --lib-border-radius-lg: 1rem; /* 16px */
+  --lib-border-radius-rounded: 3rem; /* 50px */
+  --lib-border-radius-circle: 50%;
+
+  --lib-input-border: 1px solid var(--lib-primary-color);
+  --lib-input-border-hover: 1px solid var(--lib-hover-color);
+  --lib-input-box-shadow: 0 0 10px var(--lib-primary-color);
+  --lib-input-border-error: 2px solid var(--lib-danger-color);
+
+  --lib-label-margin: 0 0 8px 0;
+  --lib-input-padding: 8px;
+  --lib-label-font-size: 0.875rem; /* 14px */
+  --lib-text-font-size: 0.875rem; /* 14px */
+  --lib-error-font-size: 0.75rem; /* 12px */
+}
