@@ -5,7 +5,7 @@ import {
 } from '../button/button.component';
 
 @Component({
-  selector: 'lib-video-recoder',
+  selector: 'uab-video-recoder',
   standalone: false,
   templateUrl: './video-recoder.component.html',
   styleUrl: './video-recoder.component.scss',

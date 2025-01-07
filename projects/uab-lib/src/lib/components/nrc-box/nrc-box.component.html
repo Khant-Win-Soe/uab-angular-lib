@@ -53,7 +53,7 @@
 </div>
 
 <div class="nrc_box">
-  <lib-dropdown-box
+  <uab-dropdown-box
     [value]="stateCode"
     placeholder="၁၂"
     displayValue="code_mm"
@@ -62,7 +62,7 @@
     (selectionChange)="stateCodeChange($event)"
   />
   {{ "/" }}
-  <lib-dropdown-box
+  <uab-dropdown-box
     [value]="townshipCode"
     placeholder="ကမန"
     displayValue="code_mm"
@@ -71,7 +71,7 @@
     [isDisabled]="!townshipList"
   />
   {{ "(" }}
-  <lib-dropdown-box
+  <uab-dropdown-box
     [value]="stateCode"
     placeholder="နိုင်"
     displayValue="code_mm"
@@ -80,5 +80,5 @@
   />
   {{ ")" }}
 
-  <div class="nrc_number_box"><lib-input-box /></div>
+  <div class="nrc_number_box"><uab-input-box /></div>
 </div>

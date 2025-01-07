@@ -38,7 +38,7 @@ export const ButtonRadiusStyles: {
 };
 
 @Component({
-  selector: 'lib-button',
+  selector: 'uab-button',
   standalone: false,
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',

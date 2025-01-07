@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-radio-box',
+  selector: 'uab-radio-box',
   standalone: false,
 
   templateUrl: './radio-box.component.html',

@@ -36,7 +36,7 @@ interface TownshopListModel {
 }
 @Component({
   standalone: false,
-  selector: 'lib-nrc-box',
+  selector: 'uab-nrc-box',
   templateUrl: './nrc-box.component.html',
   styleUrl: './nrc-box.component.scss',
 })

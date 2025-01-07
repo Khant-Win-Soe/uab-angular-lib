@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-data-grid',
+  selector: 'uab-data-grid',
   standalone: false,
 
   templateUrl: './data-grid.component.html',

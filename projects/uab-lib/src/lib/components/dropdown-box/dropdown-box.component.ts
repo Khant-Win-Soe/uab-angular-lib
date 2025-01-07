@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class DropDownDataModel {}
 
 @Component({
-  selector: 'lib-dropdown-box',
+  selector: 'uab-dropdown-box',
   standalone: false,
 
   templateUrl: './dropdown-box.component.html',

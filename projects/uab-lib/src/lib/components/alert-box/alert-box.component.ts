@@ -18,7 +18,7 @@ export const AlertTypeConst: { [key in AlertType]: AlertType } = {
 };
 
 @Component({
-  selector: 'lib-alert-box',
+  selector: 'uab-alert-box',
   standalone: false,
   templateUrl: './alert-box.component.html',
   styleUrl: './alert-box.component.scss',

@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   standalone: false,
-  selector: 'lib-input-box',
+  selector: 'uab-input-box',
   templateUrl: './input-box.component.html',
   styleUrl: './input-box.component.scss',
 })
