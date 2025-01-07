@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: false,
   template: `
     <div *ngIf="isActive">
-      <ng-content>R</ng-content>
+      <ng-content></ng-content>
     </div>
   `,
   styles: [],
